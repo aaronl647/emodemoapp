@@ -1,0 +1,30 @@
+body {
+  width: 25vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+  background: linear-gradient(180deg, #70f, #40f);
+}
+
+.container {
+  width: 50px;
+  height: 500px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: inherit;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: inherit;
+}
