@@ -6,9 +6,6 @@ import "./VerticalScroll.css";
 function VerticalScroll() {
   const constraintRef = useRef(null);
 
-  // const handleChange = () => {
-  //   console.log(e);
-  // };
   return (
     <div className="body">
       <motion.div className="container" ref={constraintRef}>
