@@ -6,6 +6,15 @@ import "./VerticalScroll.css";
 function VerticalScroll() {
   const constraintRef = useRef(null);
 
+  const handleRightDrag = () => {
+    console.log("dragged right bitch!");
+  };
+  const handleUpPull = () => {
+    console.log("up pull");
+  };
+  const handleDownPull = () => {
+    console.log("down pull");
+  };
   return (
     <div className="body">
       <motion.div className="container" ref={constraintRef}>
@@ -13,8 +22,15 @@ function VerticalScroll() {
           className="item"
           drag
           dragConstraints={constraintRef}
-          onDrag={(event, info) => {
-            console.log(event);
+          onDragEnd={(event, info) => {
+            console.log(info.point.y, info.point.x);
+            if (info.point.x > 300) {
+              handleRightDrag();
+            } else if (info.point.y < 374) {
+              handleUpPull();
+            } else if (info.point.y > 374) {
+              handleDownPull();
+            }
           }}
         />
       </motion.div>
