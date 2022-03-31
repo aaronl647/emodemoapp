@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal, Box, Typography } from "@mui/material";
 
 const style = {
-  position: "absolute" as "absolute",
+  position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
@@ -15,8 +15,7 @@ const style = {
 
 function SwipeModal() {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+
   return (
     <div>
       <Modal
