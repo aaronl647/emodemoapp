@@ -3,17 +3,16 @@ import "./App.css";
 import VerticalScroll from "./components/VerticalScroll/VerticalScroll";
 import LineWave from "./components/LineWave/LineWave";
 
-function App() {
+function App({ setScrollValue }) {
   const [scrollValue, setScrollValue] = useState(0);
   const handleDrag = () => {
-    setScrollValue();
-    console.log("do something");
+    console.log(scrollValue);
   };
   return (
     <div className="App">
       <h1>Hello World</h1>
       <div className="scroll">
-        <VerticalScroll onDrag={handleDrag} />
+        <VerticalScroll setScrollValue={setScrollValue} onChange={handleDrag} />
       </div>
       <div className="canvas-wave">
         <LineWave />
