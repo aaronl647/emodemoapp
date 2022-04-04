@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./VerticalScroll.css";
 import HoldButton from "../HoldButton/HoldButton";
