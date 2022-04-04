@@ -1,12 +1,7 @@
 .App {
-  /* margin: 30px; */
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.canvas-wave {
-  margin: 30px;
 }
 
 @media only screen and (max-width: 375px) {
@@ -14,6 +9,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
   }
 }

@@ -15,10 +15,10 @@ canvas {
 
 @media only screen and (max-width: 375px) {
   canvas {
-    width: 200px;
-    height: 125px;
+    width: 100px;
+    height: 650px;
     display: block;
-    margin: 0 auto;
+    margin: auto;
     background: #333;
   }
 }
