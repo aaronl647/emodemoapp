@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import "./VerticalScroll.css";
 import HoldButton from "../HoldButton/HoldButton";
 
-const VerticalScroll = ({ setScrollValue }) => {
+const VerticalScroll = ({ setScrollValueY, setScrollValueX }) => {
   const constraintRef = useRef(null);
   return (
     <div className="body">
@@ -14,9 +14,10 @@ const VerticalScroll = ({ setScrollValue }) => {
           drag
           dragConstraints={constraintRef}
           onDrag={(event, info) => {
-            var y = info.point.y;
-            var x = info.point.x;
-            return setScrollValue(y);
+            return setScrollValueY(info.point.y);
+          }}
+          onDragEnd={(event, info) => {
+            return setScrollValueX(info.point.x);
           }}
         >
           <HoldButton />

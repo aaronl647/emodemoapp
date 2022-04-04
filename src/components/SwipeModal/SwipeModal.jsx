@@ -13,13 +13,13 @@ const style = {
   p: 4,
 };
 
-function SwipeModal() {
-  const [open, setOpen] = useState(false);
-
+function SwipeModal({ setOpen }) {
   return (
     <div>
       <Modal
-        open={open}
+        open={() => {
+          return setOpen(true);
+        }}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
