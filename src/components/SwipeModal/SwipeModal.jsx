@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Modal, Box, Typography } from "@mui/material";
 
 const style = {
@@ -13,13 +13,12 @@ const style = {
   p: 4,
 };
 
-function SwipeModal({ setOpen }) {
+function SwipeModal(props) {
   return (
     <div>
       <Modal
-        open={() => {
-          return setOpen(true);
-        }}
+        open={props.show}
+        close={props.close}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >

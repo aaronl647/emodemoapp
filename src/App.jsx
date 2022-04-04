@@ -7,12 +7,7 @@ import SwipeModal from "./components/SwipeModal/SwipeModal";
 function App() {
   const [scrollValueY, setScrollValueY] = useState(0);
   const [scrollValueX, setScrollValueX] = useState(0);
-  const [open, setOpen] = useState(false);
-
-  const handleDrag = () => {
-    if (scrollValueX > 600) {
-    }
-  };
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className="App">
@@ -20,9 +15,16 @@ function App() {
         <VerticalScroll
           setScrollValueX={setScrollValueX}
           setScrollValueY={setScrollValueY}
-        >
-          <SwipeModal onChange={handleDrag()} setOpen={setOpen} />
-        </VerticalScroll>
+          onChange={() => {
+            setOpenModal(true);
+          }}
+        />
+        <SwipeModal
+          show={openModal}
+          close={() => {
+            setOpenModal(false);
+          }}
+        />
       </div>
       <div className="canvas-wave">
         <LineWave scrollValueY={scrollValueY} />
