@@ -16,9 +16,8 @@ canvas {
 @media only screen and (max-width: 375px) {
   canvas {
     width: 150px;
-    height: 650px;
+    height: 350px;
     display: block;
-    margin: auto;
     background: #333;
   }
 }
