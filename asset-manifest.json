@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/emodemoapp/static/css/main.cc84d3a4.css",
+    "main.css": "/emodemoapp/static/css/main.1620fcee.css",
     "main.js": "/emodemoapp/static/js/main.8fc1584f.js",
     "index.html": "/emodemoapp/index.html",
-    "main.cc84d3a4.css.map": "/emodemoapp/static/css/main.cc84d3a4.css.map",
+    "main.1620fcee.css.map": "/emodemoapp/static/css/main.1620fcee.css.map",
     "main.8fc1584f.js.map": "/emodemoapp/static/js/main.8fc1584f.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc84d3a4.css",
+    "static/css/main.1620fcee.css",
     "static/js/main.8fc1584f.js"
   ]
 }
