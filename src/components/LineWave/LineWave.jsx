@@ -9,7 +9,7 @@ function LineWave({ scrollValueY }, props) {
   const w = 600 / 2;
   const h = 200 / 2;
   const amplitude = h;
-  var frequency = "0.00" + scrollValueY;
+  var frequency = "0.0" + scrollValueY;
   var phi = 0;
 
   const draw = (ctx, frameCount) => {
@@ -20,7 +20,6 @@ function LineWave({ scrollValueY }, props) {
 
     ctx.beginPath();
     ctx.strokeStyle = "hsl(" + frameCount + ",100%,50%)";
-    ctx.moveTo(0, cHeight);
     for (var x = 0; x < w; x++) {
       if (scrollValueY < 300) {
         var y = (Math.sin(x * frequency + phi) * amplitude) / 2 + amplitude / 2;
@@ -30,8 +29,7 @@ function LineWave({ scrollValueY }, props) {
       }
       ctx.lineTo(x, y);
     }
-    ctx.lineTo(w, cHeight);
-    ctx.lineTo(0, cHeight);
+
     ctx.stroke();
   };
   useEffect(() => {

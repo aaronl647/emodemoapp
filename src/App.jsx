@@ -11,6 +11,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className="canvas-wave">
+        <LineWave scrollValueY={scrollValueY} />
+      </div>
       <div className="scroll">
         <VerticalScroll
           setScrollValueX={setScrollValueX}
@@ -25,9 +28,6 @@ function App() {
             setOpenModal(false);
           }}
         />
-      </div>
-      <div className="canvas-wave">
-        <LineWave scrollValueY={scrollValueY} />
       </div>
     </div>
   );

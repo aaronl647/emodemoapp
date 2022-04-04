@@ -2,7 +2,7 @@
   "name": "emodemoapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aaronl647.github.com",
+  "homepage": "https://aaronl647.github.com/emodemoapp",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
