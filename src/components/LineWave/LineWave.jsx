@@ -5,25 +5,30 @@ function LineWave({ scrollValue }, props) {
   const canvasRef = useRef(null);
 
   const cWidth = 400;
-  const cHeight = 150;
-  const w = 400;
-  const h = 200;
+  const cHeight = 250;
+  const w = 600 / 2;
+  const h = 200 / 2;
   const amplitude = h;
-  const frequency = "0.00" + scrollValue;
+  var frequency = "0.00" + scrollValue;
   var phi = 0;
 
   const draw = (ctx, frameCount) => {
-    ctx.lineWidth = 1;
+    ctx.lineWidth = 5;
     ctx.clearRect(0, 0, cWidth, cHeight);
     ctx.beginPath();
     phi = frameCount / 30;
 
-    ctx.clearRect(0, 0, cWidth, cHeight);
     ctx.beginPath();
     ctx.strokeStyle = "hsl(" + frameCount + ",100%,50%)";
     ctx.moveTo(0, cHeight);
     for (var x = 0; x < w; x++) {
-      var y = (Math.sin(x * frequency + phi) * amplitude) / 2 + amplitude / 2;
+      if (scrollValue < 300) {
+        var y = (Math.sin(x * frequency + phi) * amplitude) / 2 + amplitude / 2;
+      } else if (scrollValue > 300) {
+        frequency = "0." + scrollValue;
+        var y = (Math.sin(x * frequency + phi) * amplitude) / 2 + amplitude / 2;
+      }
+      // var y = (Math.sin(x * frequency + phi) * amplitude) / 2 + amplitude / 2;
       ctx.lineTo(x, y);
     }
     ctx.lineTo(w, cHeight);
@@ -48,8 +53,6 @@ function LineWave({ scrollValue }, props) {
   }, [draw]);
   return (
     <div className="wave-container">
-      {scrollValue}
-      {console.log()}
       <canvas ref={canvasRef} {...props}></canvas>
     </div>
   );

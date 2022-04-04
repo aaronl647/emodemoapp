@@ -1,14 +1,14 @@
 .wave-container {
-  width: 700px;
-  height: 450px;
   display: flex;
-  justify-content: center;
 }
 body {
-  margin: 0;
-  overflow: hidden;
   background: #333;
+  overflow: hidden;
 }
 canvas {
+  width: 400px;
+  height: 250px;
+  display: block;
+  margin: 0 auto;
   background: #333;
 }

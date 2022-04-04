@@ -10,7 +10,6 @@ function App() {
   };
   return (
     <div className="App">
-      <h1>Hello World</h1>
       <div className="scroll">
         <VerticalScroll setScrollValue={setScrollValue} onChange={handleDrag} />
       </div>
